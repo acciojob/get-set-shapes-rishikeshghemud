@@ -3,7 +3,7 @@ class Rectangle {
 	constructor(width, height) {
 
 		if(height<0 || width<0) {
-			return "Please enter positive values";
+			throw new Error("Please enter positive values");
 		}
 		
 		this.width=width;
@@ -23,7 +23,7 @@ class Rectangle {
 	}
 }
 
-class Square extends Animal {
+class Square extends Rectangle {
 	constructor(width) {
 		super(width, width);
 	}
